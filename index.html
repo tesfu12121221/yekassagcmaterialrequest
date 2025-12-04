@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ye-Kassa General Contaractor</title>
+  <title>Ye-Kassa General Contractor</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,6 +11,7 @@
       color: #333;
       margin: 0;
       padding: 0;
+      overflow-x: hidden; /* Prevent horizontal scroll */
     }
 
     header {
@@ -27,9 +28,11 @@
     }
 
     main {
-      max-width: 800px;
-      margin: 3rem auto;
+      max-width: 1250px; /* Match iframe width */
+      margin: 0 auto; /* Center the content */
       text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     p {
@@ -58,32 +61,41 @@
       font-size: 0.9rem;
       color: #555;
     }
+
+    /* Responsive iframe container */
+    .iframe-container {
+      width: 100%;
+      max-width: 1250px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 2500px; /* Keep your desired height */
+      border: none;
+    }
+
+    /* Responsive height for mobile */
+    @media (max-width: 768px) {
+      .iframe-container iframe {
+        height: 3000px; /* Adjust height for mobile if needed */
+      }
+      
+      main {
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
-        <iframe src="https://script.google.com/macros/s/AKfycbz3H5u7vMOv4j5a4M2i62ufxRcxmmzOg2DLwsJX_yHFbCTc1nrZO-x-tkiyyNapy2L7/exec"
-          allowfullscreen
-          frameborder="0"
-          width="1250"
-          height="2500"
-          ></iframe>
-      </div>
+    <div class="iframe-container">
+      <iframe 
+        src="https://script.google.com/macros/s/AKfycbz3H5u7vMOv4j5a4M2i62ufxRcxmmzOg2DLwsJX_yHFbCTc1nrZO-x-tkiyyNapy2L7/exec"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
